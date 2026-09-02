@@ -512,6 +512,80 @@ footer {
     background: white;
 }
 
+/* HERO ACTIONS */
+
+.hero-actions {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-actions a {
+    padding: 12px 20px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    background: white;
+    transition: 0.25s;
+}
+
+.hero-actions a:first-child {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.hero-actions a:hover {
+    transform: translateY(-2px);
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.hero-actions a:first-child:hover {
+    color: white;
+    background: #1d4ed8;
+}
+
+
+/* SKILLS GRID */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.skill-card {
+    background: white;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.skill-card h3 {
+    margin: 0 0 18px;
+    color: #0f172a;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    padding: 7px 12px;
+    border-radius: 30px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
 
 /* ================= MOBILE ================= */
 
@@ -590,6 +664,17 @@ footer {
 
     section > h2 {
         font-size: 2rem;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        justify-content: center;
     }
 
 }
